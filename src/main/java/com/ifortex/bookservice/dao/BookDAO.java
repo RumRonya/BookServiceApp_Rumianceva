@@ -23,7 +23,7 @@ public class BookDAO {
     {
         //using NativeQuery bc field Set<String> genres doesn't have @ElementCollection
         //so that is the best way to work with this column
-        List<Object[]> results = entityManager.createNativeQuery("SELECT unnest(genre) AS genr, COUNT(*) AS count" +
+        List<Object[]> results = entityManager.createNativeQuery("SELECT unnest(genre) AS genr, COUNT(*) AS count " +
                 "FROM books GROUP BY genr ORDER BY count DESC").
                 getResultList();
 
