@@ -4,10 +4,12 @@ import com.ifortex.bookservice.dao.BookDAO;
 import com.ifortex.bookservice.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 @Component
+@Service
 public class BookServiceImpl implements BookService {
 
     private final BookDAO bookDAO;
